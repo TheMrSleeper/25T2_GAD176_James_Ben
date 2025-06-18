@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace StabbyStuff.Weapons
 {
-    public class Knife : MonoBehaviour
+    public class Knife : MonoBehaviour, ICollectable, ICraftable
     {
         // Properties
         // Has a damage amount
@@ -23,6 +23,23 @@ namespace StabbyStuff.Weapons
             Debug.Log("Enemy Stabbed with " +gameObject.name);
         }
         // Can be picked up
+        public void Collect()
+        {
+            // Output to console that knife has been collected
+            Debug.Log("You have collected a new knife!");
+        }
+
+        public void Craft()
+        {
+            // Output crafting process to console
+            Debug.Log("You crafted a knife");
+            Collect();
+        }
+
+        public bool IsCraftable()
+        {
+            return true;
+        }
         // Can be dropped
     }
 }
