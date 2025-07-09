@@ -11,9 +11,22 @@ namespace StabbyStuff.Player
         // Contains collection of items
         [SerializeField] private Knife[] knives;
 
+        [SerializeField] private Item[] items; 
+
         public void StabEnemy()
         {
             knives[0].Stab();
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                if (items[0] != null)
+                {
+                    Debug.Log("Item in the first slot is " + items[0].itemName);
+                }
+            }
         }
     }
 }
