@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999c835a69e629f449a412dab2bdfec0, type: 3}
   m_Name: GoldenKnife
   m_EditorClassIdentifier: 
-  name: 
-  itemID: 0
-  quality: 0
+  itemName: 
+  itemID: 6
+  quality: 100
